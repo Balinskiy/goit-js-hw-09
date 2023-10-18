@@ -16,3 +16,55 @@ img {
   display: block;
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: #0074d9;
+}
+
+.datetime-input {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.btn-start {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-start:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.field {
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 14px;
+  color: #777;
+}

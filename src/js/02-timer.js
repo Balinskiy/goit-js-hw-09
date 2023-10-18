@@ -37,6 +37,7 @@ let intervalId = null;
 
 function startCountdown() {
   clearInterval(intervalId); 
+  refs.button.disabled = true;
 
   const updateCountdown = () => {
     const currentTime = Date.now();
@@ -44,6 +45,7 @@ function startCountdown() {
 
     if (diff <= 0) {
       clearInterval(intervalId);
+      alert('Time is out')
       return;
     }
 
