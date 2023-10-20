@@ -11,29 +11,24 @@ btnStop.addEventListener('click', handlerStop);
 
 let intervalID;
 
-function btnDisabled(disable) {
-  return disable;
-}
-
 function handlerStart() {
-  if (!intervalID) {
-    btnStart.disabled = btnDisabled(true);
-    btnStop.disabled = !btnDisabled(true);
+    btnDisabled(true);
     intervalID = setInterval(() => {
       const randomColor = getRandomHexColor();
       bodyColor.style.backgroundColor = randomColor;
     }, 1000);
-  }
 }
 
 function handlerStop() {
   clearInterval(intervalID);
   intervalID = null;
-  btnStart.disabled = !btnDisabled(true);
-  btnStop.disabled = btnDisabled(true);
+  btnDisabled(false);
 }
 
-
+function btnDisabled(param) {
+  btnStart.disabled = param;
+  btnStop.disabled = !param;
+}
 
 
 
